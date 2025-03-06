@@ -8,14 +8,14 @@ The **UIU Research Portal (UIURP)** is a web-based platform designed to facilita
 
 ### **1. Install MongoDB Community Edition**
 
-1. **Download MongoDB**:
+i. **Download MongoDB**:
 
    - Visit the official MongoDB download page: [MongoDB Download Center](https://www.mongodb.com/try/download/community).
    - Select **Windows** as the operating system.
    - Choose the **MSI Installer** (easier installation).
    - Click **Download**.
 
-2. **Run the Installer**:
+ii. **Run the Installer**:
 
    - Double-click the downloaded **MSI** file.
    - Follow the installation wizard:
@@ -24,7 +24,7 @@ The **UIU Research Portal (UIURP)** is a web-based platform designed to facilita
      - Leave the default port **27017** (or change if necessary).
    - Click **Install** and complete the setup.
 
-3. **Verify Installation**:
+iii. **Verify Installation**:
 
    - Open **Command Prompt** (`Win + R` → type `cmd` → press Enter).
    - Run the following command to check if MongoDB is installed:
@@ -33,38 +33,55 @@ The **UIU Research Portal (UIURP)** is a web-based platform designed to facilita
      ```
    - If the command works, MongoDB is installed successfully.
 
-4. **Start MongoDB Service**:
-
-   - Open **Command Prompt** and run:
-     ```bash
-     net start MongoDB
-     ```
-   - MongoDB should now be running on your system.
-
 ---
 
-### **2. Install MongoDB Compass (GUI Tool)**
+### **2. Install MongoDB Compass (GUI Tool) + setup MongoDB Atlas**
 
-1. **Download MongoDB Compass**:
+i. **Download MongoDB Compass**:
 
    - Visit the official download page: [MongoDB Compass Download](https://www.mongodb.com/products/compass).
    - Select **Windows** and download the installer.
 
-2. **Run the Installer**:
+ii. **Run the Installer**:
 
    - Double-click the installer and follow the setup instructions.
 
-3. **Connect MongoDB Compass to Local MongoDB Server**:
+iii. **Connect MongoDB Compass to UIURP**:
 
-   - Open **MongoDB Compass**.
-   - In the **Connection** field, enter:
+   - If you are using MongoDB Compass, follow these steps:
+   - Open MongoDB Compass.
+   - Click New Connection.
+   - In the Connection String field, paste:
+     ```perl
+        mongodb+srv://uiurp:uiurp12345@uiurp.fluqo.mongodb.net/
      ```
-     mongodb://localhost:27017
-     ```
-   - Click **Connect**.
-   - You should now see the databases and collections.
+   - Click Connect.
+   - If successful, you will see your database and collections.
 
 ---
+### **3. Clone repo + run**
+
+i. **Clone Project**:
+
+   - Open Command Prompt (Win + R → type cmd → Enter).
+   - Navigate to the XAMPP htdocs directory:
+        ```bash
+           cd C:\xampp\htdocs
+        ```
+   - Clone the UIURP repository:
+        ``` bash
+           git clone https://github.com/syed-nafis/uiurp.git
+        ```
+ii. **Start Apache Web Server**:
+
+   - Open XAMPP Control Panel.
+   - Click Start next to Apache.
+   - Open a browser and visit:
+        ```arduino
+           http://localhost/uiurp/
+        ```
+        The UIU Research Portal should now be running!
+   
 
 ## **macOS Setup**
 
