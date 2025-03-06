@@ -1,6 +1,6 @@
-# Setting Up MongoDB with MongoDB Compass on Windows and macOS
+# UIU-RP
 
-MongoDB is a popular NoSQL database, and MongoDB Compass is a GUI tool for managing and visualizing MongoDB data. Below are the steps to install and set up MongoDB along with MongoDB Compass on **Windows** and **macOS**.
+The **UIU Research Portal (UIURP)** is a web-based platform designed to facilitate and promote research activities at United International University (UIU). It serves as a hub where students and faculty members can explore research projects, connect with mentors, and collaborate on academic initiatives. The portal provides essential features such as research project listings, faculty profiles, keyword-based search functionality, and a discussion forum to enhance engagement within the university's research community. 
 
 ---
 
