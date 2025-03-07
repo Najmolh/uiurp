@@ -89,14 +89,14 @@ ii. **Start Apache Web Server**:
 
 MongoDB is installed on macOS via **Homebrew**.
 
-1. **Install Homebrew** (if not already installed):
+i. **Install Homebrew** (if not already installed):
 
    - Open **Terminal** and run:
      ```bash
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
      ```
 
-2. **Install MongoDB**:
+ii. **Install MongoDB**:
 
    - Run the following command:
      ```bash
@@ -105,14 +105,14 @@ MongoDB is installed on macOS via **Homebrew**.
      ```
    - Replace `7.0` with the latest MongoDB version if needed.
 
-3. **Start MongoDB Service**:
+iii. **Start MongoDB Service**:
 
    - Run:
      ```bash
      brew services start mongodb-community@7.0
      ```
 
-4. **Verify Installation**:
+iv. **Verify Installation**:
 
    - Run:
      ```bash
@@ -124,64 +124,58 @@ MongoDB is installed on macOS via **Homebrew**.
 
 ### **2. Install MongoDB Compass**
 
-1. **Download MongoDB Compass**:
+i. **Download MongoDB Compass**:
 
    - Visit: [MongoDB Compass Download](https://www.mongodb.com/products/compass).
    - Select **macOS** and download the `.dmg` file.
 
-2. **Install MongoDB Compass**:
+ii. **Install MongoDB Compass**:
 
    - Open the **.dmg** file.
    - Drag the **MongoDB Compass** icon to the **Applications** folder.
 
-3. **Connect MongoDB Compass to Local MongoDB Server**:
+iii. **Connect MongoDB Compass to UIURP**:
 
-   - Open **MongoDB Compass**.
-   - In the **Connection** field, enter:
+   - Open MongoDB Compass.
+   - Click New Connection.
+   - In the Connection String field, paste:
+     ```perl
+        mongodb+srv://uiurp:uiurp12345@uiurp.fluqo.mongodb.net/
      ```
-     mongodb://localhost:27017
-     ```
-   - Click **Connect**.
-   - You should now see your MongoDB databases.
+   - Click Connect.
+   - If successful, you will see your database and collections.
 
----
+### **3. Run**:
 
-## **Additional Commands**
+i. **Clone Project**:
 
-### **Starting MongoDB Manually**
+   - Open Terminal
+   - Navigate to prefered directory
+   - Clone the UIURP repository:
+        ``` bash
+           git clone https://github.com/syed-nafis/uiurp.git
+        ```
+   - Move into the project folder:
+        ```bash
+              cd uiurp
+        ```
 
-If MongoDB is not running, start it manually:
+ii. **Use Built in PHP server**
 
-- **Windows**:
-  ```bash
-  net start MongoDB
-  ```
-- **macOS**:
-  ```bash
-  brew services start mongodb-community@7.0
-  ```
-
-### **Stopping MongoDB**
-
-- **Windows**:
-  ```bash
-  net stop MongoDB
-  ```
-- **macOS**:
-  ```bash
-  brew services stop mongodb-community@7.0
-  ```
-
-### **Accessing the MongoDB Shell**
-
-To enter the MongoDB shell:
-
-```bash
-mongosh
-```
+   - use PHP's built-in server to run the project.
+   - Make sure you are inside the project folder:
+   - Start the PHP development server:
+      ```bash
+           php -S localhost:8000
+      ```
+   - Open a browser and visit:
+      ```bash
+           http://localhost:8000/
+      ```
+      The UIU Research Portal should now be running!
 
 ---
 
 ## **Conclusion**
 
-Now you have **MongoDB** installed and running, along with **MongoDB Compass** for database management. Let me know if you need help with further configurations! 🚀
+**For further assistance ask ChatGPT**
